@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum no PDS Corporativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Scrum no PDS Corporativo</h1>
+            <ul class="nav-links">
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#diagrama">Diagrama</a></li>
+                <li><a href="#fluxo">Fluxo</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#papeis">Papéis</a></li>
+                <li><a href="#raci">RACI</a></li>
+                <li><a href="#praticas">Práticas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Processo Scrum no PDS Corporativo</h1>
+            <p>Framework ágil iterativo e incremental para entregas frequentes de valor</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="introducao" class="section">
+            <h2>Introdução</h2>
+            <p>
+                Scrum é um framework ágil iterativo e incremental que promove entregas frequentes de valor, 
+                transparência, inspeção e adaptação. No PDS Corporativo, o Scrum é utilizado para garantir 
+                planejamento colaborativo, previsibilidade, qualidade técnica e evolução contínua do produto.
+            </p>
+            <p>
+                Este documento descreve o processo Scrum adotado, incluindo o fluxo de trabalho, papéis, 
+                atividades, práticas e políticas.
+            </p>
+            <div class="flow-path">
+                <div class="flow-item">Ideia / Caso de Uso</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Product Backlog</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Sprint Backlog</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Em Desenvolvimento</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Em Teste</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Concluído</div>
+            </div>
+        </section>
+
+        <section id="diagrama" class="section">
+            <h2>Diagrama de Atividades (Ciclo de Vida)</h2>
+            <p>O ciclo de vida do processo Scrum no PDS Corporativo segue estas etapas:</p>
+            
+            <div class="lifecycle-diagram">
+                <div class="lifecycle-phase">
+                    <div class="phase-number">1</div>
+                    <h4>Ideação</h4>
+                    <p>Caso de uso é avaliado e validado pelo grupo</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">2</div>
+                    <h4>Criação da Story</h4>
+                    <p>User Story é criada com prioridade e pontos</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">3</div>
+                    <h4>Refinamento</h4>
+                    <p>Story é quebrada em Tasks com estimativas</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">4</div>
+                    <h4>Sprint Planning</h4>
+                    <p>Stories priorizadas entram na Sprint</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">5</div>
+                    <h4>Desenvolvimento</h4>
+                    <p>Implementação das funcionalidades</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">6</div>
+                    <h4>Testes</h4>
+                    <p>Validação e garantia de qualidade</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">7</div>
+                    <h4>Implantação</h4>
+                    <p>Deploy e disponibilização</p>
+                </div>
+                <div class="lifecycle-arrow">→</div>
+                <div class="lifecycle-phase">
+                    <div class="phase-number">8</div>
+                    <h4>Review & Retro</h4>
+                    <p>Validação de valor e melhoria contínua</p>
+                </div>
+            </div>
+
+            <div class="diagram-box">
+                <h3>Detalhamento do Fluxo</h3>
+                <ol class="diagram-steps">
+                    <li>Caso de uso é avaliado pelo grupo</li>
+                    <li>Caso de uso gera uma User Story</li>
+                    <li>A Story recebe:
+                        <ul>
+                            <li>Prioridade (negócio)</li>
+                            <li>Pontos (baseados no esforço total)</li>
+                        </ul>
+                    </li>
+                    <li>A Story é quebrada em Tasks</li>
+                    <li>Cada Task recebe uma estimativa de tempo</li>
+                    <li>A soma das Tasks define a pontuação final da Story</li>
+                    <li>As Stories priorizadas entram na Sprint</li>
+                    <li>A Sprint é executada, testada e revisada</li>
+                </ol>
+            </div>
+            <div class="policies">
+                <h3>Políticas do Fluxo</h3>
+                <ul>
+                    <li>Stories sempre refinadas antes da Sprint</li>
+                    <li>Pontuação baseada no esforço total das tasks</li>
+                    <li>Sprint com escopo fechado</li>
+                    <li>DoR e DoD explícitos</li>
+                    <li>Feedback contínuo via Review e Retro</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="fluxo" class="section">
+            <h2>Fluxo Scrum</h2>
+            
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <h3>Product Backlog</h3>
+                    <p class="column-desc">Sem WIP - Itens priorizados por valor de negócio</p>
+                    <div class="card">
+                        <h4>US-017</h4>
+                        <p>Cadastro de cliente</p>
+                        <span class="priority high">Alta</span>
+                        <span class="points">8 pontos</span>
+                    </div>
+                    <div class="card">
+                        <h4>US-021</h4>
+                        <p>Exportar relatórios</p>
+                        <span class="priority medium">Média</span>
+                        <span class="points">5 pontos</span>
+                    </div>
+                    <div class="card">
+                        <h4>US-034</h4>
+                        <p>Pesquisa por nome</p>
+                        <span class="priority low">Baixa</span>
+                        <span class="status">Em refinamento</span>
+                    </div>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Sprint Backlog</h3>
+                    <p class="column-desc">Itens selecionados para a Sprint atual</p>
+                    <div class="card">
+                        <h4>US-017</h4>
+                        <p>Cadastro de cliente</p>
+                    </div>
+                    <div class="card">
+                        <h4>US-028</h4>
+                        <p>Login social</p>
+                    </div>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Em Desenvolvimento</h3>
+                    <p class="column-desc">Tasks em execução</p>
+                    <div class="card task">
+                        <h4>TASK-01</h4>
+                        <p>Criar endpoint de cadastro</p>
+                        <span class="time">6h</span>
+                    </div>
+                    <div class="card task">
+                        <h4>TASK-02</h4>
+                        <p>Validações de formulário</p>
+                        <span class="time">4h</span>
+                    </div>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Em Teste</h3>
+                    <p class="column-desc">Validação funcional e técnica</p>
+                    <ul class="test-list">
+                        <li>Testes unitários</li>
+                        <li>Testes de integração</li>
+                        <li>Testes exploratórios</li>
+                    </ul>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Concluído</h3>
+                    <p class="column-desc">Atende à Definition of Done</p>
+                    <div class="card done">
+                        <h4>US-013</h4>
+                        <p>Recuperar senha</p>
+                    </div>
+                    <div class="card done">
+                        <h4>US-017</h4>
+                        <p>Cadastro de cliente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="atividades" class="section">
+            <h2>Tabela de Atividades</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Etapa</th>
+                            <th>Objetivo</th>
+                            <th>Entradas</th>
+                            <th>Atividades</th>
+                            <th>Saídas</th>
+                            <th>Políticas</th>
+                            <th>Métricas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ideia / Caso de Uso</td>
+                            <td>Identificar necessidade</td>
+                            <td>Demandas, feedbacks</td>
+                            <td>Discussão em grupo</td>
+                            <td>Caso de uso validado</td>
+                            <td>Clareza de valor</td>
+                            <td>Tempo de decisão</td>
+                        </tr>
+                        <tr>
+                            <td>Product Backlog</td>
+                            <td>Organizar demandas</td>
+                            <td>Casos de uso</td>
+                            <td>Criar stories, priorizar</td>
+                            <td>Stories priorizadas</td>
+                            <td>Backlog ordenado</td>
+                            <td>Age do backlog</td>
+                        </tr>
+                        <tr>
+                            <td>Refinamento</td>
+                            <td>Preparar stories</td>
+                            <td>Story bruta</td>
+                            <td>Quebrar em tasks, estimar</td>
+                            <td>Story pronta</td>
+                            <td>DoR definido</td>
+                            <td>% stories prontas</td>
+                        </tr>
+                        <tr>
+                            <td>Sprint Planning</td>
+                            <td>Planejar Sprint</td>
+                            <td>Backlog priorizado</td>
+                            <td>Selecionar stories</td>
+                            <td>Sprint Backlog</td>
+                            <td>Capacidade do time</td>
+                            <td>Pontos planejados</td>
+                        </tr>
+                        <tr>
+                            <td>Desenvolvimento</td>
+                            <td>Construir solução</td>
+                            <td>Tasks</td>
+                            <td>Codar, testar, revisar</td>
+                            <td>Funcionalidade pronta</td>
+                            <td>Sprint fechada</td>
+                            <td>Velocidade</td>
+                        </tr>
+                        <tr>
+                            <td>Testes</td>
+                            <td>Garantir qualidade</td>
+                            <td>Build</td>
+                            <td>Testes auto e manuais</td>
+                            <td>Story validada</td>
+                            <td>DoD</td>
+                            <td>Defeitos</td>
+                        </tr>
+                        <tr>
+                            <td>Review</td>
+                            <td>Validar valor</td>
+                            <td>Sprint concluída</td>
+                            <td>Demonstração</td>
+                            <td>Feedback</td>
+                            <td>Transparência</td>
+                            <td>Aceite</td>
+                        </tr>
+                        <tr>
+                            <td>Retrospectiva</td>
+                            <td>Melhorar processo</td>
+                            <td>Dados da Sprint</td>
+                            <td>Análise e ações</td>
+                            <td>Plano de melhoria</td>
+                            <td>Ação clara</td>
+                            <td>Ações concluídas</td>
+                        </tr>
+                        <tr>
+                            <td>Implantação</td>
+                            <td>Disponibilizar software</td>
+                            <td>Funcionalidades prontas</td>
+                            <td>Deploy, configuração</td>
+                            <td>Software em produção</td>
+                            <td>CI/CD ativo</td>
+                            <td>Tempo de deploy</td>
+                        </tr>
+                        <tr>
+                            <td>Gerência do Projeto</td>
+                            <td>Acompanhar progresso</td>
+                            <td>Métricas, impedimentos</td>
+                            <td>Daily, relatórios</td>
+                            <td>Status atualizado</td>
+                            <td>Transparência</td>
+                            <td>Burndown, Velocity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="papeis" class="section">
+            <h2>Papéis e Responsabilidades</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <h3>Product Owner</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Priorizar backlog, definir valor, aceitar stories</p>
+                    <p><strong>Artefatos:</strong> Product Backlog</p>
+                </div>
+                <div class="role-card">
+                    <h3>Scrum Master</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Facilitar Scrum, remover impedimentos</p>
+                    <p><strong>Artefatos:</strong> Métricas, ações</p>
+                </div>
+                <div class="role-card">
+                    <h3>Tech Lead</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Direção técnica e qualidade</p>
+                    <p><strong>Artefatos:</strong> Decisões técnicas</p>
+                </div>
+                <div class="role-card">
+                    <h3>Desenvolvedores</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Implementar tasks, estimar tempo</p>
+                    <p><strong>Artefatos:</strong> Código, PRs</p>
+                </div>
+                <div class="role-card">
+                    <h3>QA</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Garantir qualidade e testes</p>
+                    <p><strong>Artefatos:</strong> Evidências</p>
+                </div>
+                <div class="role-card">
+                    <h3>Stakeholders</h3>
+                    <p><strong>Responsabilidades:</strong></p>
+                    <p>Feedback e validação de valor</p>
+                    <p><strong>Artefatos:</strong> Aprovações</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="raci" class="section">
+            <h2>Matriz RACI - Associação de Papéis às Atividades</h2>
+            <p>A matriz RACI define a responsabilidade de cada papel em cada atividade do processo:</p>
+            <ul class="raci-legend">
+                <li><strong>R</strong> (Responsible) - Responsável pela execução</li>
+                <li><strong>A</strong> (Accountable) - Autoridade e aprovador final</li>
+                <li><strong>C</strong> (Consulted) - Consultado para decisões</li>
+                <li><strong>I</strong> (Informed) - Informado sobre o andamento</li>
+            </ul>
+            <div class="table-container">
+                <table class="raci-table">
+                    <thead>
+                        <tr>
+                            <th>Atividade</th>
+                            <th>Product Owner</th>
+                            <th>Scrum Master</th>
+                            <th>Tech Lead</th>
+                            <th>Desenvolvedores</th>
+                            <th>QA</th>
+                            <th>Stakeholders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ideação / Caso de Uso</strong></td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-c">C</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Product Backlog</strong></td>
+                            <td class="raci-ra">R/A</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Refinamento</strong></td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sprint Planning</strong></td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desenvolvimento</strong></td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testes</strong></td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-ra">R/A</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implantação</strong></td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Review</strong></td>
+                            <td class="raci-a">A</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-c">C</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Retrospectiva</strong></td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-ra">R/A</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-r">R</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gerência do Projeto</strong></td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-ra">R/A</td>
+                            <td class="raci-c">C</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                            <td class="raci-i">I</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="praticas" class="section">
+            <h2>Práticas Ágeis</h2>
+            <div class="practices-container">
+                <div class="practice-category">
+                    <h3>Práticas Gerais</h3>
+                    <ul>
+                        <li>Scrum Events (Planning, Daily, Review, Retro)</li>
+                        <li>Sprint fixa (ex: 2 semanas)</li>
+                        <li>Definition of Ready (DoR)</li>
+                        <li>Definition of Done (DoD)</li>
+                        <li>Estimativa por Task</li>
+                        <li>Pontuação da Story baseada no esforço total</li>
+                        <li>Testes automatizados</li>
+                        <li>PR pequeno + code review</li>
+                        <li>Métricas de velocidade e previsibilidade</li>
+                        <li>Melhoria contínua</li>
+                    </ul>
+                </div>
+
+                <div class="practice-category">
+                    <h3>Práticas por Atividade</h3>
+                    <table class="practices-table">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th>Práticas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Avaliação de Caso de Uso</td>
+                                <td>Discussão em grupo; foco no valor</td>
+                            </tr>
+                            <tr>
+                                <td>Refinamento</td>
+                                <td>Quebrar story em tasks; estimar tempo por task</td>
+                            </tr>
+                            <tr>
+                                <td>Pontuação da Story</td>
+                                <td>Soma das horas das tasks → conversão em pontos</td>
+                            </tr>
+                            <tr>
+                                <td>Sprint Planning</td>
+                                <td>Planejar por capacidade real do time</td>
+                            </tr>
+                            <tr>
+                                <td>Desenvolvimento</td>
+                                <td>Commits pequenos; testes unitários</td>
+                            </tr>
+                            <tr>
+                                <td>Testes</td>
+                                <td>Automação + exploração</td>
+                            </tr>
+                            <tr>
+                                <td>Review</td>
+                                <td>Demo objetiva; feedback imediato</td>
+                            </tr>
+                            <tr>
+                                <td>Retrospectiva</td>
+                                <td>2–3 ações práticas e mensuráveis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Processo: Scrum no PDS Corporativo</p>
+            <p>© 2026 - Documentação do Processo de Desenvolvimento de Software</p>
+        </div>
+    </footer>
+</body>
+</html>
